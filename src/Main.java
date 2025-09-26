@@ -18,8 +18,8 @@ public class Main {
         scan.nextLine();
         System.out.println();
         double tipAmount = (double)(int)((((tipPercent / 100) * billAmount * 100)) + 0.5) / 100;
-        double tipAmountPerPerson = (double)(int)(((((double)tipAmount / 100) / (double)((double)numOfPeople / 100)) * 100) + 0.5) / 100;
-        double billWithTip = (double)(billAmount + tipAmount);
+        double tipAmountPerPerson = (double)(int)(((((double)tipAmount / 100) / ((double)numOfPeople / 100)) * 100) + 0.5) / 100;
+        double billWithTip = (billAmount + tipAmount);
         double billPerPerson = (double)(int)(((double)billWithTip / 100) / ((double)numOfPeople / 100) * 100) / 100;
         System.out.println("-------------------------------------------");
         System.out.println("Total tip amount: $" + tipAmount);
