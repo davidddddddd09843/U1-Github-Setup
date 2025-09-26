@@ -18,17 +18,21 @@ public class Main {
         scan.nextLine();
         System.out.println();
         double tipAmount = (double)(int)((((tipPercent / 100) * billAmount * 100)) + 0.5) / 100;
-        double tipAmountPerPerson = (double)(int)(((((double)tipAmount / 100) / ((double)numOfPeople / 100)) * 100) + 0.5) / 100;
-        double billWithTip = billAmount + tipAmount;
+        double tipAmountPerPerson = (double)(int)((((tipAmount / 100) / ((double)numOfPeople / 100)) * 100) + 0.5) / 100;
+        double billWithTip = (double)(billAmount / 100 + tipAmount / 100) * 100;
         double billPerPerson = (double)(int)(((double)billWithTip / 100) / ((double)numOfPeople / 100) * 100) / 100;
         System.out.println("-------------------------------------------");
-        System.out.println("Total tip amount: $" + tipAmount);
+        System.out.print("Total tip amount: ");
+        System.out.printf("$%.2f\n", tipAmount);
         System.out.println("-------------------------------------------");
-        System.out.println("Total bill cost: $" + billWithTip);
+        System.out.print("Total bill cost: ");
+        System.out.printf("$%.2f\n", billWithTip);
         System.out.println("-------------------------------------------");
-        System.out.println("Tip per person: $" + tipAmountPerPerson);
+        System.out.print("Tip per person: ");
+        System.out.printf("$%.2f\n", tipAmountPerPerson);
         System.out.println("-------------------------------------------");
-        System.out.println("Total bill per person: $" + billPerPerson);
+        System.out.print("Total bill per person: ");
+        System.out.printf("$%.2f\n", billPerPerson);
         System.out.println("-------------------------------------------");
 
 
